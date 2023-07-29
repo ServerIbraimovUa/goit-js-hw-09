@@ -9,18 +9,18 @@ buttonStartEl.addEventListener('click', onStartClick);
 buttonStopEl.addEventListener('click', onStopClick);
 
 function onStartClick() {
-  buttonStartEl.disabled = true;
-  buttonStopEl.disabled = false;
+  onButtonActive();
   timerId = setInterval(() => {
     bodyEl.style.backgroundColor = getRandomHexColor();
   }, 1000);
 }
 
 function onStopClick() {
-  buttonStopEl.disabled = true;
-  buttonStartEl.disabled = false;
-
   clearInterval(timerId);
+}
+function onButtonActive() {
+  buttonStartEl.disabled = true;
+  buttonStopEl.disabled = false;
 }
 
 function getRandomHexColor() {
