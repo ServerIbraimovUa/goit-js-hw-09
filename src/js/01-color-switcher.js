@@ -16,6 +16,8 @@ function onStartClick() {
 }
 
 function onStopClick() {
+  buttonStartEl.disabled = false;
+  buttonStopEl.disabled = true;
   clearInterval(timerId);
 }
 function onButtonActive() {
